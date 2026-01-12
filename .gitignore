@@ -1,0 +1,10 @@
+.venv/
+
+.streamlit/secrets.toml
+
+# 2. Python: Ignore compiled files and cache
+__pycache__/
+*.pyc
+
+# Design documents (personal notes)
+design.md

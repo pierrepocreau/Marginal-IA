@@ -1,0 +1,18 @@
+[project]
+name = "marginal-ia"
+version = "0.1.0"
+description = ""
+readme = "README.md"
+requires-python = "<=3.11.14, >=3.11"
+dependencies = [
+    "streamlit",
+    "pandas",
+    "streamlit-audiorecorder",
+    "openai>=2.14.0",
+    "supabase",
+    "pytest",
+    "pytest-cov",
+    "pyzbar",
+    "pillow",
+    "requests",
+]

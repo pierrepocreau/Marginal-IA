@@ -1,0 +1,12 @@
+[server]
+# Prevent session state from being shared across users
+enableCORS = true
+enableXsrfProtection = true
+
+[browser]
+# Clear session data on browser close
+gatherUsageStats = false
+
+[client]
+# Ensure proper session isolation
+toolbarMode = "minimal"
