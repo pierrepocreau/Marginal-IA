@@ -49,11 +49,8 @@ current_book = st.session_state.get("current_book_obj", None)
 audio = audiorecorder("🎙️ Start recording", "⏹️ Stop recording", key=f"recorder_{st.session_state.recorder_key}")
 st.caption("Page # · Quote · Tags · Comment")
 
-
 if len(audio) > 0:
-    # Capture audio and increment key immediately to reset widget state
     audio_data = audio
-    st.session_state.recorder_key += 1
 
     with st.container():
         st.write("")
@@ -96,6 +93,8 @@ if len(audio) > 0:
                     st.session_state.notes.append(new_note)
 
                     status.update(label="Saved!", state="complete", expanded=False)
+                    st.session_state.recorder_key += 1
+                    st.rerun()
 
             except Exception as e:
                 status.update(label="Error", state="error", expanded=True)

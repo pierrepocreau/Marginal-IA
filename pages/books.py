@@ -59,7 +59,6 @@ for b in books_data:
 
 st.session_state.library = library
 
-# --- 5. Display Book List ---
 if not library:
     st.info("No books yet.")
 else:
